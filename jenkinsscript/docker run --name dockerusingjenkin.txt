@@ -1,0 +1,1 @@
+docker run --name dockerusingjenkins -d -v jenkins_home:/var/jenkins_home -p 8090:8081 -p 50000:50000 --restart=on-failure jyothi_windows/jenkins:lts-jdk11

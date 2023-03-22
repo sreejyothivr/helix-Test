@@ -1,0 +1,38 @@
+{
+  "page.name": "shoppage",
+  "locators": [
+    {
+      "locator.name": "firstproduct",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@class='product-tile__item slick-slide slick-current slick-active']//h5[@class='product-tile__title']",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "addtocart",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//input[@class='btn-purchasable tds-btn tds-btn--primary tds-btn--width-full product__container__details__submit__buy submit__buy--desktop']",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "logoo",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@aria-label='Tesla Logo']//*[name()='svg']",
+        "locator.strategy": "visible"
+      }
+    },
+
+    {
+      "locator.name": "shopbutton",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "(//span[contains(text(),'Shop')])[1]",
+        "locator.strategy": "visible"
+      }
+    }
+  ]
+}

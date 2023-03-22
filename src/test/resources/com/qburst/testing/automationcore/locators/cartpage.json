@@ -1,0 +1,15 @@
+{
+  "page.name": "searchbox",
+  "locators": [
+    {
+      "locator.name": "carticon",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@aria-label='See your cart']//*[name()='svg']",
+        "locator.strategy": "visible"
+      }
+    },
+
+
+  ]
+}

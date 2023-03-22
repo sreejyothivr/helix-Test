@@ -1,0 +1,15 @@
+{
+  "page.name": "inventorypage",
+  "locators": [
+    {
+      "locator.name": "selectWithinDropdown",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//select[@name='range']",
+        "locator.strategy": "visible"
+      }
+    }
+
+  ]
+}
+

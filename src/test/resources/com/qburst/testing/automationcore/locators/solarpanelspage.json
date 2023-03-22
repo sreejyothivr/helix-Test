@@ -1,0 +1,21 @@
+{
+  "page.name": "solarpanelspage",
+  "locators": [
+    {
+      "locator.name": "solarPanelHeading",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//h1[contains(text(),'Solar for Existing Roofs')]",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "solarPanelSubHeading",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//p[contains(text(),'Lowest Cost Solar Panels in America—Money-back guarantee')]",
+        "locator.strategy": "visible"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "page.name": "teslapage",
+  "locators": [
+    {
+      "locator.name": "buynow",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//section[@class='tcl-homepage-hero tcl-homepage-hero--overlay']//div[contains(@class,'tcl-homepage-hero__buttons tcl-homepage-hero__buttons-on-desktop')]//a[@title='View Inventory']",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "modelSMenuItem",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@title='Model S']/span",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "logoo",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@aria-label='Tesla Logo']//*[name()='svg']",
+        "locator.strategy": "visible"
+      }
+    },
+
+    {
+      "locator.name": "shopbutton",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "(//span[contains(text(),'Shop')])[1]",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "charging",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "(//a[contains(text(),'Charging')])[1]",
+        "locator.strategy": "visible"
+      }
+    },
+
+    {
+      "locator.name": "outofStock",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//div[contains(text(),'Out Of Stock')]/preceding-sibling::div/a",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "outofStockText",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "(//a[@class='tds-link tds-link--primary stock-notification-link'])[1]",
+        "locator.strategy": "visible"
+      }
+    },
+    {
+      "locator.name": "solarPanelMenuItem",
+      "locator.attributes": {
+        "locator.type": "xpath",
+        "locator.value": "//a[@title='Solar Panels']/span",
+        "locator.strategy": "visible"
+      }
+    }
+  ]
+}
