@@ -10,7 +10,7 @@ public class TeslaTest extends BaseTest {
 
 
     @Test()
-    public void redirectiontohomepage3() {
+    public void redirectiontohomepage3_safran() {
         String actual = "http://tesla.com";
         Percy percy = new Percy(driver.getDriver());
         TeslaPage teslaPage = new TeslaPage(driver);
@@ -27,7 +27,7 @@ public class TeslaTest extends BaseTest {
 
 
     @Test(testName = "OutofStock-item restock test validation", description = "Validation of dropdown value selection")
-    public void outofStockitemValidation() throws InterruptedException {
+    public void outofStockitemValidation_safran() throws InterruptedException {
         TeslaPage teslaPage = new TeslaPage(driver);
         driver.navigate(teslaPage.getURL());
         teslaPage.clickShopBtn();
