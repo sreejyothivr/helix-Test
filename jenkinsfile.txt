@@ -9,7 +9,7 @@ pipeline {
          string(name: 'automationId', defaultValue: '10', description: 'Automation suite id')
          choice(name: 'TEST_SUITE', choices:['integration_test.xml'], description: 'Test Suite to be executed')
          string(name: 'TargetURL', defaultValue: 'https://google.com', description: 'Target base url for test execution')
-         string(name: 'branch', defaultValue: 'master branch', description: 'Branch name')
+         string(name: 'branch', defaultValue: 'main branch', description: 'Branch name')
     }
 
     stages {
