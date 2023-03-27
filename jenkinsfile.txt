@@ -26,13 +26,7 @@ pipeline {
        always {
 
 
-         halm_report automationSuite: "${params.automationSuite}",
-         automationSuiteID: "${params.automationId}",
-         halmConnectionID: '915bc48c-f8a2-491c-b471-2b25cf4781c1',
-         projectID: '{a062321e-26cb-4e60-b955-5409606b35c2}',
-         testFileFormat: '0',
-         branch: "${params.branch}",
-         testFilePattern: 'target\\surefire-reports\\junitreports\\TEST-com.qburst.testing.automationcore.testng.BrowserTest.xml'
+        halm_report automationSuite: 'vitalstats', automationSuiteID: 9, halmConnectionID: 'b974f013-8bd7-40ca-82a2-b3970c0b8276', projectID: '{a062321e-26cb-4e60-b955-5409606b35c2}', testFileFormat: '0', testFilePattern: 'target\\surefire-reports\\junitreports\\TEST-helixTest.HelixTest.xml'
        }
     }
 
