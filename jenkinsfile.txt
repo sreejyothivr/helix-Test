@@ -23,10 +23,10 @@ pipeline {
     }
 
     post{
-       always {
+      always {
 
 
-        halm_report automationSuite: 'vitalstats', automationSuiteID: 9, halmConnectionID: 'b974f013-8bd7-40ca-82a2-b3970c0b8276', projectID: '{a062321e-26cb-4e60-b955-5409606b35c2}', testFileFormat: '0', testFilePattern: 'target\\surefire-reports\\junitreports\\TEST-helixTest.HelixTest.xml'
+        halm_report automationSuite: "${params.automationSuite}", automationSuiteID:"${params.automationId}", halmConnectionID: 'b974f013-8bd7-40ca-82a2-b3970c0b8276', projectID: '{a062321e-26cb-4e60-b955-5409606b35c2}', testFileFormat: '0', testFilePattern: 'target\\surefire-reports\\junitreports\\TEST-helixTest.HelixTest.xml'
        }
     }
 
