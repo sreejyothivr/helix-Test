@@ -8,7 +8,6 @@ pipeline {
          string(name: 'automationSuite', defaultValue: 'Framework Test Suite', description: 'Automation suite name')
          string(name: 'automationId', defaultValue: '10', description: 'Automation suite id')
          choice(name: 'TEST_SUITE', choices:['integration_test.xml'], description: 'Test Suite to be executed')
-     
          string(name: 'branch', defaultValue: 'main branch', description: 'Branch name')
     }
 
