@@ -1,99 +1,40 @@
-pipeline
+pipeline {
 
-{
-
-agent any
+    agent any
 
 
+    parameters {
+       
+         string(name: 'automationSuite', defaultValue: 'Framework Test Suite', description: 'Automation suite name')
+         string(name: 'automationId', defaultValue: '10', description: 'Automation suite id')
+         choice(name: 'TEST_SUITE', choices:['integration_test.xml'], description: 'Test Suite to be executed')
+         string(name: 'TargetURL', defaultValue: 'https://google.com', description: 'Target base url for test execution')
+         string(name: 'branch', defaultValue: 'master branch', description: 'Branch name')
+    }
 
-stages
+    stages {
+        stage('run integration test') {
+            steps {
 
-{
+                bat "mvn test -Dtestng.suitexml=${params.TEST_SUITE} -Dtest.url.base=${params.TargetURL}"
+            }
+        }
 
-stage('Build')
+    }
 
-{
-
-steps
-
-{
-
-bat "mvn clean"
-
-}
-
-
-
-}
-
-stage('deploy')
-
-{
-
-steps{
-
-echo 'deploying the code'
-
-}
+    post{
+       always {
 
 
+         halm_report automationSuite: "${params.automationSuite}",
+         automationSuiteID: "${params.automationId}",
+         halmConnectionID: '915bc48c-f8a2-491c-b471-2b25cf4781c1',
+         projectID: '{a062321e-26cb-4e60-b955-5409606b35c2}',
+         testFileFormat: '0',
+         branch: "${params.branch}",
+         testFilePattern: 'target\\surefire-reports\\junitreports\\TEST-com.qburst.testing.automationcore.testng.BrowserTest.xml'
+       }
+    }
 
 }
 
-stage('test')
-
-{
-
-steps{
-
-bat "mvn test"
-
-}
-
-
-
-}
-
-
-
-stage('Unit Testing')
-
-{
-
-steps{
-
-bat "mvn compile"
-
-}
-
-
-
-}
-
-stage('Release')
-
-{
-
-
-
-steps{
-
-echo 'releasing the project'
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-}
-
-
-
-}
